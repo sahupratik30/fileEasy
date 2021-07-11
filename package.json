@@ -8,7 +8,7 @@
     "npm": "6.14.11"
   },
   "scripts": {
-    "start": "nodemon server.js -e js,css,html,ejs",
+    "start": "node server.js",
     "dev": "node server.js -e js,css,html,ejs"
   },
   "author": "\"Pratik Sahu\"",
