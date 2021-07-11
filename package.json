@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "\"file sharing app\"",
   "main": "index.js",
+  "engines": {
+    "node": "14.6.0",
+    "npm": "6.14.11"
+  },
   "scripts": {
     "start": "nodemon server.js -e js,css,html,ejs",
     "dev": "node server.js -e js,css,html,ejs"
