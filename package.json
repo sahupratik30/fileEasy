@@ -1,0 +1,21 @@
+{
+  "name": "fileeasy",
+  "version": "1.0.0",
+  "description": "\"file sharing app\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js -e js,css,html,ejs",
+    "dev": "node server.js -e js,css,html,ejs"
+  },
+  "author": "\"Pratik Sahu\"",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.2",
+    "uuid": "^8.3.2"
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>fileEasy - easy file share</title>
+  </head>
+  <body>
+    <!-- Logo section -->
+    <div class="logo_div">
+      <img src="./images/logo.png" alt="logo" />
+    </div>
+    <!-- File Upload Section Start -->
+    <section class="main_section">
+      <div class="upload_section">
+        <div class="drop_file_container">
+          <div class="icon_container">
+            <img
+              src="./images/file.png"
+              class="center"
+              alt="file_image"
+              draggable="false"
+            />
+            <img
+              src="./images/file.png"
+              class="left"
+              alt="file_image"
+              draggable="false"
+            />
+            <img
+              src="./images/file.png"
+              class="right"
+              alt="file_image"
+              draggable="false"
+            />
+            <input type="file" id="fileUpload" />
+          </div>
+          <p>Drop your file here or <span id="browseBtn">browse</span></p>
+        </div>
+        <!-- Uploading progress part -->
+        <div class="upload_progress_section">
+          <div class="progress_div"></div>
+          <div class="uploading_div">
+            <p>Uploading...</p>
+            <p class="percent"><span id="uploadPercent">0</span>%</p>
+            <div class="progress_bar"></div>
+          </div>
+        </div>
+        <!-- sharing section start -->
+        <div class="sharing_section">
+          <p class="expire">Link expires in 24 hrs</p>
+          <div class="link_container">
+            <input
+              type="text"
+              value="https://innshare.herokuapp.com/files/38b0d3d5-69f2-421b-a71d-2d8421f18b4f"
+              id="fileURL"
+              readonly=""
+            />
+            <img
+              title="Copy to Clipboard"
+              src="./images/copy.svg"
+              id="copyURLBtn"
+              alt="copy icon"
+            />
+          </div>
+          <p class="email-info">Or Send Via Email</p>
+          <div class="email_container">
+            <form id="emailForm">
+              <div class="field">
+                <label for="fromEmail">Your email</label>
+                <input
+                  type="email"
+                  autocomplete="off"
+                  required=""
+                  name="from-email"
+                  id="fromEmail"
+                />
+              </div>
+              <div class="field">
+                <label for="toEmail">Receiver's email</label>
+                <input
+                  type="email"
+                  required=""
+                  autocomplete="off"
+                  name="to-email"
+                  id="toEmail"
+                />
+              </div>
+              <div class="send-btn-container">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <img
+        class="vector"
+        src="./images/file_share.svg"
+        alt="file-share image"
+      />
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

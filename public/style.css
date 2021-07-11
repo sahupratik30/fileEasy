@@ -1,0 +1,308 @@
+/* =========== Root Variables =========== */
+:root {
+  --main-color: #f4b459;
+  --main-bg-color: #ff950033;
+  --container-width: 500px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+/* ============== Main styles start ============== */
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+}
+.logo_div {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+.logo_div img {
+  width: 200px;
+  margin-left: 1vw;
+}
+.main_section {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main_section img {
+  width: 600px;
+}
+.main_section .upload_section {
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 20px 20px #0000002e;
+}
+.main_section .upload_section .drop_file_container {
+  width: var(--container-width);
+  height: 200px;
+  margin: 20px;
+  border-radius: inherit;
+  border: 3px dashed var(--main-bg-color);
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon_container {
+  width: 75px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon_container img {
+  width: 70px;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+}
+#browseBtn {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.dragged.drop_file_container {
+  background-color: var(--main-bg-color);
+  border-color: var(--main-color);
+}
+.dragged .icon_container .center {
+  z-index: 1;
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+.dragged .icon_container .left {
+  transform-origin: bottom;
+  transform: rotate(-15deg) translateX(-25px) scale(0.9);
+  -webkit-transform: rotate(-15deg) translateX(-25px) scale(0.9);
+  -moz-transform: rotate(-15deg) translateX(-25px) scale(0.9);
+  -ms-transform: rotate(-15deg) translateX(-25px) scale(0.9);
+  -o-transform: rotate(-15deg) translateX(-25px) scale(0.9);
+  filter: grayscale(0.3);
+  -webkit-filter: grayscale(0.3);
+}
+.dragged .icon_container .right {
+  transform-origin: bottom;
+  transform: rotate(15deg) translateX(25px) scale(0.9);
+  -webkit-transform: rotate(15deg) translateX(25px) scale(0.9);
+  -moz-transform: rotate(15deg) translateX(25px) scale(0.9);
+  -ms-transform: rotate(15deg) translateX(25px) scale(0.9);
+  -o-transform: rotate(15deg) translateX(25px) scale(0.9);
+  -webkit-filter: grayscale(0.3);
+  filter: grayscale(0.3);
+}
+#fileUpload {
+  display: none;
+}
+.upload_progress_section {
+  width: var(--container-width);
+  height: 80px;
+  border: 1px solid var(--main-color);
+  margin: auto;
+  position: relative;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  margin-bottom: 20px;
+  display: none;
+}
+.upload_progress_section .progress_div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  background-color: var(--main-bg-color);
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+.upload_progress_section .uploading_div {
+  margin-left: 2%;
+  height: 100%;
+}
+.upload_progress_section .uploading_div .percent {
+  margin: 5px 0;
+}
+.upload_progress_section .uploading_div .progress_bar {
+  height: 5px;
+  border-radius: 5px;
+  width: 5%;
+  background-color: var(--main-color);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.sharing_section {
+  width: var(--container-width);
+  display: none;
+}
+.sharing_section p {
+  text-align: center;
+}
+.sharing_section .expire {
+  opacity: 0.7;
+}
+.sharing_section .link_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px;
+}
+.sharing_section .link_container input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 3px dashed var(--main-color);
+  opacity: 0.7;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  background: var(--main-bg-color);
+}
+.sharing_section .link_container input:focus {
+  outline: none;
+}
+.sharing_section .link_container img {
+  position: absolute;
+  right: 7px;
+  height: 22px;
+  width: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+.sharing_section .email_container {
+  width: var(--container-width);
+  margin: 20px;
+}
+.sharing_section .email_container form {
+  width: 100%;
+  display: flex;
+  padding: 15px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.sharing_section .email_container form .field {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.sharing_section .email_container form input {
+  border: none;
+  width: 50%;
+  border-bottom: 2px solid var(--main-color);
+  height: 19px;
+  font-size: 16px;
+  text-align: center;
+}
+.sharing_section .email_container form input:focus {
+  outline: none;
+}
+
+.sharing_section .email_container form button {
+  width: 100px;
+  padding: 5px 10px;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+/* ================= Responsive styles start ================= */
+@media screen and (max-width: 1200px) {
+  .main_section img.vector {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  :root {
+    --container-width: 300px;
+  }
+  .sharing_section .link_container input {
+    font-size: 15px;
+  }
+  .logo_div img {
+    width: 150px;
+  }
+  .sharing_section .email_container form button {
+    font-size: 15px;
+  }
+  .sharing_section .email_container form .field {
+    flex-direction: column;
+  }
+  .sharing_section .email_container form input {
+    width: 100%;
+  }
+  .main_section .upload_section .drop_file_container .icon_container img {
+    width: 50px;
+  }
+  .main_section .upload_section .drop_file_container p {
+    font-size: 13px;
+  }
+  .sharing_section p {
+    font-size: 13px;
+    width: var(--container-width);
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  :root {
+    --container-width: 230px;
+  }
+  .logo_div img {
+    width: 130px;
+  }
+  .main_section .upload_section {
+    height: 80vh;
+  }
+  .main_section .upload_section .drop_file_container {
+    height: 120px;
+  }
+  .sharing_section .email_container form {
+    height: 150px;
+  }
+  .sharing_section .email_container form button {
+    font-size: 12px;
+  }
+}
