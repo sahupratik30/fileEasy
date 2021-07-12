@@ -15,6 +15,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--main-bg-color);
+  overflow: hidden;
 }
 .logo_div {
   height: 10vh;
@@ -117,7 +118,7 @@ body {
 }
 .upload_progress_section {
   width: var(--container-width);
-  height: 80px;
+  height: 70px;
   border: 1px solid var(--main-color);
   margin: auto;
   position: relative;
@@ -131,33 +132,43 @@ body {
 }
 .upload_progress_section .progress_div {
   position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
-  width: 50%;
+  width: 0%;
   border-radius: inherit;
   background-color: var(--main-bg-color);
   -webkit-border-radius: inherit;
   -moz-border-radius: inherit;
   -ms-border-radius: inherit;
   -o-border-radius: inherit;
+  transition: width 0.3s linear;
+  -webkit-transition: width 0.3s linear;
+  -moz-transition: width 0.3s linear;
+  -ms-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
 }
 .upload_progress_section .uploading_div {
-  margin-left: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
   height: 100%;
 }
 .upload_progress_section .uploading_div .percent {
-  margin: 5px 0;
+  margin: 3px 0;
+  opacity: 0.7;
 }
 .upload_progress_section .uploading_div .progress_bar {
   height: 5px;
   border-radius: 5px;
-  width: 5%;
+  width: 0%;
   background-color: var(--main-color);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  transition: width 0.3s linear;
+  -webkit-transition: width 0.3s linear;
+  -moz-transition: width 0.3s linear;
+  -ms-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
 }
 .sharing_section {
   width: var(--container-width);
@@ -197,7 +208,7 @@ body {
   right: 7px;
   height: 22px;
   width: 30px;
-  background: transparent;
+  background: #fff0db;
   cursor: pointer;
 }
 .sharing_section .email_container {
@@ -249,6 +260,35 @@ body {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
 }
+.prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 2vh;
+  transform: translate(-50%, 60px);
+  padding: 10px 25px;
+  box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14),
+    0px 3px 14px 2px rgba(0, 0, 0, 0.12), 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+  background-color: var(--main-color);
+  -webkit-transform: translate(-50%, 60px);
+  -moz-transform: translate(-50%, 60px);
+  -ms-transform: translate(-50%, 60px);
+  -o-transform: translate(-50%, 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+}
 /* ================= Responsive styles start ================= */
 @media screen and (max-width: 1200px) {
   .main_section img.vector {
@@ -294,7 +334,7 @@ body {
     width: 130px;
   }
   .main_section .upload_section {
-    height: 80vh;
+    max-height: 80vh;
   }
   .main_section .upload_section .drop_file_container {
     height: 120px;
