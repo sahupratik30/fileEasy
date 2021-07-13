@@ -37,6 +37,9 @@ A full-stack file sharing app made using NodeJS, ExpressJS, and MongoDB where yo
 ![Screenshot2](https://user-images.githubusercontent.com/80754608/125398010-5b540a80-e3cc-11eb-8127-afe19d8afb65.png)
 ![Screenshot3](https://user-images.githubusercontent.com/80754608/125398005-5abb7400-e3cc-11eb-8eeb-bc2777ae2aa6.png)
 
+## Video Reference
+[Video](https://user-images.githubusercontent.com/80754608/125401137-6ad55280-e3d0-11eb-96a5-8f6effbdae72.mp4)
+
 ## Link to view the app
 - Link - `https://file-easy-share.herokuapp.com/`
 - [Visit App](https://file-easy-share.herokuapp.com/)
