@@ -264,15 +264,15 @@ body {
   position: absolute;
   left: 50%;
   bottom: 2vh;
-  transform: translate(-50%, 60px);
+  transform: translate(-50%, 100px);
   padding: 10px 25px;
   box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14),
     0px 3px 14px 2px rgba(0, 0, 0, 0.12), 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
   background-color: var(--main-color);
-  -webkit-transform: translate(-50%, 60px);
-  -moz-transform: translate(-50%, 60px);
-  -ms-transform: translate(-50%, 60px);
-  -o-transform: translate(-50%, 60px);
+  -webkit-transform: translate(-50%, 100px);
+  -moz-transform: translate(-50%, 100px);
+  -ms-transform: translate(-50%, 100px);
+  -o-transform: translate(-50%, 100px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,6 +325,10 @@ body {
     width: var(--container-width);
     margin: 20px;
   }
+  .prompt {
+    font-size: 12px;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 320px) {
   :root {
@@ -344,5 +348,9 @@ body {
   }
   .sharing_section .email_container form button {
     font-size: 12px;
+  }
+  .main_section .upload_section .drop_file_container p {
+    font-size: 13px;
+    padding: 5px 0;
   }
 }
