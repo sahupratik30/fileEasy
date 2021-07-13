@@ -139,6 +139,6 @@ function showPrompt(msg) {
   promptBox.style.transform = `translate(-50%, 0)`;
   clearTimeout(timeout);
   timeout = setTimeout(() => {
-    promptBox.style.transform = `translate(-50%, 60px)`;
+    promptBox.style.transform = `translate(-50%, 100px)`;
   }, 2000);
 }
